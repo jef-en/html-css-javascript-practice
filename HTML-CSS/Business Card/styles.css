@@ -1,0 +1,99 @@
+@font-face {
+    font-family: harry;
+    src: url(./fonts/HarryPotter.ttf);
+}
+
+@font-face {
+    font-family: subtitle;
+    src: url(./fonts/Ovation.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 16rem;
+    height: 10rem;
+    perspective: 500px
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+.front, 
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.3rem;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 8rem;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-image: url('./assets/map.jpg');
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 32, 32, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#name {
+    font-family: harry;
+    font-size: 1.5rem;
+    text-shadow: 0 0 3px black;
+}
+
+#sub {
+    font-family: subtitle;
+    font-size: 1.3rem;
+}
+
+#profile {
+    margin: 0 0 15px 0;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 3rem;
+    background-size: cover
+}

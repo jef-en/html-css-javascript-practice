@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="form-container">
+        <div id="header">
+          <h1 id="title">NASA Mars Survey Form</h1>
+          <p id="description">Share your thoughts about the expedition</p>
+        </div>
+        <form action="https://www.freecodecamp.org/">
+          <div class="field-container">
+            <label class="labels" id="name-label">Name:</label>
+            <input
+              class="form-fields"
+              type="text"
+              id="name"
+              placeholder="Enter Name"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label class="labels" id="email-label">Email: </label>
+            <input
+              class="form-fields"
+              type="email"
+              id="email"
+              placeholder="Enter Email"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label class="labels" id="number-label"> Age: </label>
+            <input
+              class="form-fields"
+              type="number"
+              id="number"
+              min="13"
+              max="120"
+              placeholder="Enter your age"
+            />
+          </div>
+          <div class="field-container">
+            <label class="labels">Rate your experience:</label>
+            <div></div>
+            <label class="label-choice"
+              ><input type="radio" name="exp" value="bad" class="btn" />
+              Not Satisfied
+            </label>
+            <label class="label-choice"
+              ><input type="radio" name="exp" value="good" class="btn" />
+              Neither Satisfied nor Dissatisfied
+            </label>
+            <label class="label-choice"
+              ><input type="radio" name="exp" value="better" class="btn" />
+              Satisfied
+            </label>
+          </div>
+          <div class="field-container">
+            <label class="labels">Favorite part of the expedition:</label>
+            <select id="dropdown" class="form-fields">
+              <option value="" disabled selected>Select one</option>
+              <option value="1">Gathering rare stones</option>
+              <option value="2">Interacting with locals</option>
+              <option value="3">Breathing iron oxide</option>
+            </select>
+          </div>
+          <div class="field-container">
+            <label class="labels" for="reason"
+              >Why did you sign up for the expedition?</label
+            >
+            <div class="reason" class="label-choice">
+              <label for="sports" class="label-choice">
+                <input
+                  type="checkbox"
+                  id="reason1"
+                  value="Sports"
+                  class="btn"
+                />
+                To save earth from aliens
+              </label>
+              <label for="gaming" class="label-choice">
+                <input
+                  type="checkbox"
+                  id="reason2"
+                  value="Gaming"
+                  class="btn"
+                />
+                To discover valuable minerals and sell it to merchant
+              </label>
+
+              <label for="arts" class="label-choice">
+                <input type="checkbox" id="reason3" value="Arts" class="btn" />
+                To search for life
+              </label>
+
+              <label for="arts" class="label-choice">
+                <input type="checkbox" id="reason3" value="Arts" class="btn" />
+                To see the beauty, beyond one can imagine
+              </label>
+            </div>
+          </div>
+          <div class="field-container">
+            <label class="labels">Tell us more:</label>
+            <textarea class="form-fields"></textarea>
+          </div>
+          <div class="field-container">
+            <input id="submit" type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

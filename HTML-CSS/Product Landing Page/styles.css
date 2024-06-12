@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* HEADER  */
+#header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+}
+
+ul > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: black;
+}
+
+/* MAIN */
+#hero {
+  height: 100vh;
+  width: 100%;
+  padding: 0 15rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+#title {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 80px;
+}
+
+#sub-title {
+  width: 100%;
+}
+
+#hero-title {
+  height: 80%;
+  width: 90%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-image {
+  height: 80%;
+  width: 70%;
+}
+
+#img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#product-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 15rem;
+}
+
+.bg {
+  height: 30rem;
+  width: 50rem;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+}
+
+.button {
+  height: 2rem;
+  width: 10rem;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+#video-container {
+  height: 100vh;
+  width: 100%;
+  padding: 5rem 15rem;
+}
+
+#video {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#form-container {
+  height: 100%;
+  width: 100%;
+  padding: 0 15rem;
+  padding-bottom: 5rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#email {
+  height: 2rem;
+  width: 20rem;
+  border-radius: 5px;
+}

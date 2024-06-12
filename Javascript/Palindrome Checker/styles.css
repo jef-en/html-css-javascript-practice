@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #1f1f1f;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+#main-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title-container {
+  width: 50%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#title {
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+
+.text {
+  width: 65%;
+}
+
+#palindrome-checker {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+#sub-title {
+  margin-bottom: 1rem;
+}
+
+#text-input {
+  width: 70%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+#check-btn {
+  border-radius: 7px;
+  width: 30%;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: all ease-in-out 0.1s;
+  box-shadow: 0 9px #999;
+}
+
+#check-btn:hover {
+  background-color: gold;
+}
+
+#check-btn:active {
+  background-color: gold;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
+
+#result {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

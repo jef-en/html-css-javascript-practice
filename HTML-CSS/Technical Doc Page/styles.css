@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  display: flex;
+}
+
+a {
+  color: #40a944;
+  text-decoration: none;
+}
+
+/* Navigation */
+
+.parent-container {
+  display: flex;
+}
+
+#navbar {
+  padding: 2rem 2rem;
+  background-color: #1f1f1f;
+  color: white;
+  width: 70vw;
+  max-width: 70vw;
+  height: auto;
+  text-align: left;
+}
+
+#title {
+  text-align: center;
+  font-size: small;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+nav li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link:hover {
+  color: #40a944;
+}
+
+/* Main */
+
+#main-doc {
+  padding: 5rem 2rem;
+}
+
+/* style all instance of section except the last() */
+section:not(#Hello_World) {
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.section-subtitle {
+  padding-bottom: 1rem;
+}
+
+main p,
+ul {
+  padding-bottom: 1rem;
+}
+
+main ul,
+ol {
+  background-color: #cccccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 2rem 4rem;
+}
+
+#Hello_World > ul {
+  list-style: number;
+}
+
+.code {
+  font-family: "Space Mono", monospace;
+  background-color: #1f1f1f;
+  color: #40a944;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 2rem 2rem;
+  font-size: 16px;
+}
+
+@media (min-width: 1440px) {
+  #navbar {
+    max-width: 300px;
+  }
+}

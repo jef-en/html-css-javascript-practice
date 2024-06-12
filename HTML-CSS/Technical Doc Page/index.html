@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Technical Documentation Page</title>
+  </head>
+  <body>
+    <div class="parent-container">
+      <nav id="navbar">
+        <header id="title"><h1>Python Documentation</h1></header>
+        <ul>
+          <li><a class="nav-link" href="#What_is_Python">What is Python</a></li>
+          <li>
+            <a class="nav-link" href="#What_and_Where?">What and Where?</a>
+          </li>
+          <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+          <li><a class="nav-link" href="#Variables">Variables</a></li>
+          <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="What_is_Python">
+          <header><h1 class="section-title">What is Python</h1></header>
+          <p>
+            Python is a computer programming language often used to build
+            websites and software, automate tasks, and conduct data analysis.
+            Python is a general-purpose language, meaning it can be used to
+            create a variety of different programs and isn’t specialized for any
+            specific problems. This versatility, along with its
+            beginner-friendliness, has made it one of the most-used programming
+            languages today.
+          </p>
+          <p>
+            Stack Overflow's 2022 Developer Survey revealed that Python is the
+            fourth most popular programming language, with respondents saying
+            that they use Python almost 50 percent of the time in their
+            development work. Survey results also showed that Python is tied
+            with Rust as the most-wanted technology, with 18% percent of
+            developers who aren't using it already saying that they are
+            interested in learning Python
+            <a
+              href="https://survey.stackoverflow.co/2022/#most-popular-technologies-language"
+              >[1]</a
+            >
+          </p>
+        </section>
+        <section class="main-section" id="What_and_Where?">
+          <header><h1 class="section-title">What and Where?</h1></header>
+          <p>
+            Python is commonly used for developing websites and software, task
+            automation, data analysis, and data visualization. Since it’s
+            relatively easy to learn, Python has been adopted by many
+            non-programmers such as accountants and scientists, for a variety of
+            everyday tasks, like organizing finances.
+          </p>
+          <ul>
+            <li>Data analysis and machine learning</li>
+            <li>Web development</li>
+            <li>Automation or scripting</li>
+            <li>Software testing and prototyping</li>
+            <li>Everyday tasks</li>
+          </ul>
+          <p>
+            “Writing programs is a very creative and rewarding activity,” says
+            University of Michigan and Coursera instructor Charles R Severance
+            in his book Python for Everybody. “You can write programs for many
+            reasons, ranging from making your living to solving a difficult data
+            analysis problem to having fun to helping someone else solve a
+            problem.”
+          </p>
+        </section>
+        <section class="main-section" id="Hello_World">
+          <header><h1 class="section-title">Hello World</h1></header>
+          <p>
+            Printing "Hello World" is the first program in Python. This program
+            will not take any user input, it will just print "Hello World" on
+            the output screen. It is used to test if the software needed to
+            compile and run the program has been installed correctly.
+          </p>
+          <ol>
+            <li>
+              Install Python. Make sure that Python is installed on your system
+              or not. If Python is not installed, then install it from
+              <a href="https://www.python.org/downloads/">here</a>.
+            </li>
+            <li>Choose Text Editor or IDE to write the code.</li>
+            <li>
+              Open Text Editor or IDE, create a new file, and write the code to
+              print Hello World.
+            </li>
+            <li>Save the file with a file name and extension ".py".</li>
+            <li>Compile/Run the program.</li>
+          </ol>
+          <h3 class="section-subtitle">Python Program to Print Hello World</h3>
+          <p>
+            Consider the below code that will print "Hello World" or any message
+            that you will write inside the print() method on the screen.
+          </p>
+          <div class="code">
+            <code>
+              # Python code to print "Hello World"<br />
+              print ("Hello World")
+            </code>
+          </div>
+          <p>
+            In the above code, we wrote two lines. The first line is the Python
+            comment that will be ignored by the Python interpreter, and the
+            second line is the print() statement that will print the given
+            message ("Hello World") on the output screen.
+          </p>
+        </section>
+        <section class="main-section" id="Variables">
+          <header><h1 class="section-title">Variables</h1></header>
+          <p>
+            Python variables are the reserved memory locations used to store
+            values with in a Python Program. This means that when you create a
+            variable you reserve some space in the memory. Based on the data
+            type of a variable, Python interpreter allocates memory and decides
+            what can be stored in the reserved memory. Therefore, by assigning
+            different data types to Python variables, you can store integers,
+            decimals or characters in these variables.
+          </p>
+          <h3 class="section-subtitle">Creating Variables</h3>
+          <p>
+            Python variables do not need explicit declaration to reserve memory
+            space or you can say to create a variable. A Python variable is
+            created automatically when you assign a value to it. The equal sign
+            (=) is used to assign values to variables.
+          </p>
+          <p>
+            The operand to the left of the = operator is the name of the
+            variable and the operand to the right of the = operator is the value
+            stored in the variable. For example
+          </p>
+          <div class="code">
+            <code>
+              counter = 100 <br />
+              miles = 1000.0 <br />
+              name = "Zara Ali"
+            </code>
+          </div>
+          <p>
+            This example creates different types (an integer, a float, and a
+            string) of variables.
+          </p>
+          <h3 class="section-subtitle">Deleting Python Variables</h3>
+          <p>
+            You can delete the reference to a number object by using the del
+            statement. The syntax of the del statement is −
+          </p>
+          <div class="code">
+            <code>del var1[,var2[,var3[....,varN]]]] </code>
+          </div>
+          <p>
+            You can delete a single object or multiple objects by using the del
+            statement. For example −
+          </p>
+          <div class="code">
+            <code>
+              del var <br />
+              del var_a, var_b
+            </code>
+          </div>
+          <h3 class="section-subtitle">Getting Type of a Variable</h3>
+          <p>
+            You can get the data type of a Python variable using the python
+            built-in function type() as follows.
+          </p>
+          <div class="code">
+            <code>
+              x = "Zara" <br />
+              y = 10 <br />
+              z = 10.10 <br />
+              <br />
+              print(type(x)) <br />
+              print(type(y)) <br />
+              print(type(z))
+            </code>
+          </div>
+          <h3 class="section-subtitle">Casting Python Variables</h3>
+          <p>
+            You can specify the data type of a variable with the help of casting
+            as follows:
+          </p>
+          <div class="code">
+            <code>
+              x = str(10) <br />
+              y = int(10) <br />
+              z = float(10) <br />
+              <br />
+              print( "x =", x ) <br />
+              print( "y =", y ) <br />
+              print( "z =", z )
+            </code>
+          </div>
+          <h3 class="section-subtitle">Case-Sensitivity of Python Variables</h3>
+          <p>
+            Python variables are case sensitive which means Age and age are two
+            different variables:
+          </p>
+          <div class="code">
+            <code>
+              age = 20 <br />
+              Age = 30 <br />
+              <br />
+              print( "age =", age ) <br />
+              print( "Age =", Age )
+            </code>
+          </div>
+          <h3 class="section-subtitle">
+            Python Variables - Multiple Assignment
+          </h3>
+          <p>
+            Python allows to initialize more than one variables in a single
+            statement. In the following case, three variables have same value.
+          </p>
+          <div class="code">
+            <code>
+              >>> a=10 <br />
+              >>> b=10 <br />
+              >>> c=10 <br />
+            </code>
+          </div>
+          <p>
+            Instead of separate assignments, you can do it in a single
+            assignment statement as follows −
+          </p>
+          <div class="code">
+            <code>
+              >>> a=b=c=10 <br />
+              >>> print (a,b,c) <br />
+              10 10 10
+            </code>
+          </div>
+          <h3 class="section-subtitle">Python Variables - Naming Convention</h3>
+          <p>
+            Every Python variable should have a unique name like a, b, c. A
+            variable name can be meaningful like color, age, name etc. There are
+            certain rules which should be taken care while naming a Python
+            variable:
+          </p>
+          <ul>
+            <li>
+              A variable name must start with a letter or the underscore
+              character
+            </li>
+            <li>
+              A variable name cannot start with a number or any special
+              character like $, (, * % etc.
+            </li>
+            <li>
+              A variable name can only contain alpha-numeric characters and
+              underscores (A-z, 0-9, and _ )
+            </li>
+            <li>
+              Python variable names are case-sensitive which means Name and NAME
+              are two different variables in Python.
+            </li>
+            <li>
+              Python reserved keywords cannot be used naming the variable.
+            </li>
+          </ul>
+        </section>
+        <section class="main-section" id="Data_Types">
+          <header><h1 class="section-title">Data Types</h1></header>
+          <p>
+            A data type represents a kind of value and determines what
+            operations can be done on it. Numeric, non-numeric and Boolean
+            (true/false) data are the most obvious data types. However, each
+            programming language has its own classification largely reflecting
+            its programming philosophy.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
