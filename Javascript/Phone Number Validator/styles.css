@@ -24,8 +24,8 @@ body {
 }
 
 #phone {
-  width: 19%;
-  height: 75%;
+  width: 18rem;
+  height: 35rem;
   border: 10px solid black;
   border-radius: 2rem;
   background-color: white;
@@ -38,12 +38,19 @@ body {
   outline: 1px solid white;
 }
 
+#header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #sub-title {
-  font-size: smaller;
+  width: 12rem;
+  font-size: 12px;
 }
 
 #results-div {
-  /* display: none; */
   font-size: smaller;
 }
 
@@ -77,8 +84,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s, transform 0.1s;
+  transition: all ease-in-out 0.1s;
 }
 
 .key:hover {
