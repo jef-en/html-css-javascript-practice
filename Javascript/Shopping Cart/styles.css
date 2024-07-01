@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#title {
+  text-align: center;
+  margin: 5rem 0 1rem 0;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+#flower-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 10rem;
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 20px 10px;
+  border: 1px solid black;
+}
+
+.btn {
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+}
