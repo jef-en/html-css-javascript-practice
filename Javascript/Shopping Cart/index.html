@@ -15,6 +15,24 @@
   <body>
     <header id="title">Flora Flower</header>
     <main>
+      <!-- Basket button  -->
+      <button class="btn" id="cart">
+        <span id="show-hide">Show</span> Basket
+      </button>
+
+      <!-- Basket content -->
+      <div id="cart-container">
+        <button class="btn" id="clear-cart-btn">Clear Cart</button>
+
+        <div id="products-container"></div>
+
+        <p>Total number of items: <span id="total-items">0</span></p>
+        <p>Subtotal: <span id="subtotal">$0</span></p>
+        <p>Taxes: <span id="taxes">$0</span></p>
+        <p>Total: <span id="total">$0</span></p>
+      </div>
+
+      <!-- Product content -->
       <div id="flower-card"></div>
     </main>
     <script src="script.js"></script>
