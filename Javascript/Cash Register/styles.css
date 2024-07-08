@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #1f1f1f;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+#main-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cash-register-container {
+  width: 40rem;
+  height: 23rem;
+  border: 10px solid black;
+  border-radius: 1.5rem;
+  background-color: #e8e8e8;
+  color: black;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  outline: 1px solid white;
+}
+
+#total-container {
+  padding: 1rem;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  position: relative;
+  left: 16.2rem;
+  bottom: 6rem;
+  background-color: #2b2b2b;
+  color: gold;
+  width: 19rem;
+  height: 7rem;
+  border: 5px solid #e8e8e8;
+  border-radius: 1rem;
+}
+
+#cash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#cash {
+  font-family: "Poppins", sans-serif;
+  width: 18rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#cash-in-bank {
+  border: 2px solid black;
+  width: 18rem;
+  height: 12rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0.5rem;
+  font-size: 12.2px;
+  background-color: white;
+}
+
+#cib-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed black;
+  margin: 0.4rem;
+}
+
+#change-due {
+  background-color: white;
+  width: 18rem;
+  height: 18.2rem;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 11px;
+}
+
+#panel-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  bottom: 5rem;
+}
+
+.btn {
+  border-radius: 5px;
+  width: 18rem;
+  padding: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  transition: all ease-in-out 0.1s;
+  box-shadow: 0 9px #999;
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: gold;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: gold;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
