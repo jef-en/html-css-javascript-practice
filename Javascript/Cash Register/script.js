@@ -16,19 +16,24 @@ let cid = [
   ["ONE HUNDRED", 100],
 ];
 
-priceDisplay.textContent = price;
+const displayCID = () => {
+  cashInBank.innerHTML = "";
+  cid.forEach((item) => {
+    const itemElement = document.createElement("p");
+    itemElement.textContent = `${item[0]}: $${item[1]}`;
+    cashInBank.appendChild(itemElement);
+  });
+};
 
-// Shows the change available in bank
-cid.forEach((item) => {
-  const itemElement = document.createElement("p");
-  itemElement.textContent = `${item[0]}: $${item[1]}`;
-  cashInBank.appendChild(itemElement);
-});
+// Initial display of price and cid
+priceDisplay.textContent = price;
+displayCID();
 
 const calculateChange = (price, customerMoney, cid) => {
   cid = cid.reverse();
   let change = customerMoney - price;
   let changeArr = [];
+  // Converted into actual currency values
   const currencyValues = {
     PENNY: 0.01,
     NICKEL: 0.05,
@@ -57,6 +62,7 @@ const calculateChange = (price, customerMoney, cid) => {
 
     if (coinAmount > 0) {
       changeArr.push([coinName, coinAmount]);
+      cid[i][1] -= coinAmount;
     }
   }
 
@@ -86,6 +92,8 @@ purchaseBtn.addEventListener("click", () => {
         itemElement.textContent = `${coin[0]}: $${coin[1]}`;
         changeDue.appendChild(itemElement);
       });
+      cid.reverse();
+      displayCID();
     }
   }
 });

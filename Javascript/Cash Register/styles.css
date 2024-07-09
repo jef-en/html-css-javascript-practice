@@ -134,11 +134,13 @@ body {
 }
 
 #change-due {
-  margin: 1rem;
+  font-size: 12px;
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  font-weight: 400;
 }
 
 #panel-container {
