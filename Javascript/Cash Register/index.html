@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Cash Register</title>
   </head>
@@ -20,10 +26,16 @@
           <h2>$<span id="price-display"></span></h2>
         </div>
         <div id="panel-container">
-          <div id="change-due">
-            <hr />
-            <h4>RECEIPT</h4>
-            <hr />
+          <div id="change-due-container">
+            <hr class="dotted" />
+            <h4>CUSTOMER RECEIPT</h4>
+            <hr class="dotted" />
+            <div id="change-due"></div>
+            <div id="fixed">
+              <hr id="footer-hr" class="dotted" />
+              <h4 id="thank-you">THANK YOU!</h4>
+              <span id="barcode">201810641</span>
+            </div>
           </div>
 
           <div id="cash-container">
