@@ -3,16 +3,16 @@ const cashInBank = document.getElementById("cash-in-bank");
 const purchaseBtn = document.getElementById("purchase-btn");
 const customerCash = document.getElementById("cash");
 const changeDue = document.getElementById("change-due");
-let price = 1.87;
+let price = 19.5;
 let cid = [
-  ["PENNY", 1.01],
-  ["NICKEL", 2.05],
-  ["DIME", 3.1],
-  ["QUARTER", 4.25],
-  ["ONE", 90],
-  ["FIVE", 55],
-  ["TEN", 20],
-  ["TWENTY", 60],
+  ["PENNY", 0.5],
+  ["NICKEL", 0],
+  ["DIME", 0],
+  ["QUARTER", 0],
+  ["ONE", 0],
+  ["FIVE", 0],
+  ["TEN", 0],
+  ["TWENTY", 0],
   ["ONE HUNDRED", 100],
 ];
 
@@ -33,7 +33,6 @@ const calculateChange = (price, customerMoney, cid) => {
   cid = cid.reverse();
   let change = customerMoney - price;
   let changeArr = [];
-  // Converted into actual currency values
   const currencyValues = {
     PENNY: 0.01,
     NICKEL: 0.05,
@@ -49,10 +48,9 @@ const calculateChange = (price, customerMoney, cid) => {
   for (let i = 0; i < cid.length; i++) {
     let coinName = cid[i][0];
     let coinTotal = cid[i][1];
-    let coinValue = currencyValues[coinName]; // Get the value of the coin/note
+    let coinValue = currencyValues[coinName];
     let coinAmount = 0;
 
-    // Calculate the amount of each denomination to give as change
     while (change >= coinValue && coinTotal > 0) {
       change -= coinValue;
       change = Math.round(change * 100) / 100;
@@ -61,17 +59,23 @@ const calculateChange = (price, customerMoney, cid) => {
     }
 
     if (coinAmount > 0) {
-      changeArr.push([coinName, coinAmount]);
-      cid[i][1] -= coinAmount;
+      changeArr.push([coinName, Math.round(coinAmount * 100) / 100]);
+      cid[i][1] = Math.round((cid[i][1] - coinAmount) * 100) / 100;
     }
   }
 
   // Check if the exact change can be given
   if (change > 0) {
     return "Insufficient Funds";
-  } else {
-    return changeArr;
   }
+
+  // Check if the cash-in-drawer is now empty
+  const isCIDEmpty = cid.every((item) => item[1] === 0);
+  if (isCIDEmpty) {
+    return { status: "CLOSED", changeArr: changeArr };
+  }
+
+  return { status: "OPEN", changeArr: changeArr };
 };
 
 purchaseBtn.addEventListener("click", () => {
@@ -86,14 +90,18 @@ purchaseBtn.addEventListener("click", () => {
     if (changeResult === "Insufficient Funds") {
       changeDue.innerHTML = "Status: INSUFFICIENT_FUNDS";
     } else {
-      changeDue.innerHTML = "Status: OPEN";
-      changeResult.forEach((coin) => {
+      changeDue.innerHTML = `Status: ${changeResult.status}`;
+      changeResult.changeArr.forEach((coin) => {
         const itemElement = document.createElement("p");
         itemElement.textContent = `${coin[0]}: $${coin[1]}`;
         changeDue.appendChild(itemElement);
       });
-      cid.reverse();
-      displayCID();
+      if (changeResult.status === "CLOSED") {
+        cashInBank.innerHTML = "Cash-in-Drawer is now empty.";
+      } else {
+        cid = cid.reverse();
+        displayCID();
+      }
     }
   }
 });
