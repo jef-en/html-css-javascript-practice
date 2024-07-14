@@ -5,14 +5,14 @@ const customerCash = document.getElementById("cash");
 const changeDue = document.getElementById("change-due");
 let price = 19.5;
 let cid = [
-  ["PENNY", 0.5],
-  ["NICKEL", 0],
-  ["DIME", 0],
-  ["QUARTER", 0],
-  ["ONE", 0],
-  ["FIVE", 0],
-  ["TEN", 0],
-  ["TWENTY", 0],
+  ["PENNY", 0.1],
+  ["NICKEL", 10],
+  ["DIME", 10],
+  ["QUARTER", 10],
+  ["ONE", 10],
+  ["FIVE", 5],
+  ["TEN", 30],
+  ["TWENTY", 60],
   ["ONE HUNDRED", 100],
 ];
 
