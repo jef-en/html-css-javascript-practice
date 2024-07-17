@@ -63,8 +63,9 @@ body {
   transform: translateY(1px);
 }
 
-#sprite {
-  display: none;
+img {
+  width: 10rem;
+  height: 10rem;
 }
 
 #stats-container {
@@ -78,11 +79,54 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  gap: 2rem;
+}
+
+.font-styling {
+  font-size: x-large;
+  font-weight: normal;
+}
+
+.font-color {
+  color: #666;
+}
+
+#h-w-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  /* outline: 1px solid red; */
+}
+
+#container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  /* outline: 1px solid red; */
+}
+
+table {
+  width: 15rem;
+  outline: 1px solid red;
+}
+
+td {
+  outline: 1px solid yellow;
 }
 
 /* Pokemon Types */
 
-#types {
+#types-main {
   display: flex;
   gap: 0.5rem;
 }
